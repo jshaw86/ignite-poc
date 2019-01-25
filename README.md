@@ -26,3 +26,7 @@ NOTE: pyignite requires python3 so make sure you have python3 virtualenv setup b
 1. export IGNITE_SQL=`minikube service ignite -n ignite --url | head -n 2 | tail -n 1`
 2. pip install -r requirements.txt
 3. python ignite-sql.py 
+
+### TODO
+
+1. Figure out binary types in python: https://stackoverflow.com/questions/54340289/pyignite-serialize-and-de-serialize-complex-types
