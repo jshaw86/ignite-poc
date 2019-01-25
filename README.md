@@ -9,7 +9,7 @@ NOTE: assumes you have a kubernetes environment provisioned could be a minikube 
 3. kubectl apply -f kubernetes-resources/ignite-deployment.yaml -n ignite
 
 ### Test REST API
-1. `export IGNITE_EP=\`minikube service ignite -n ignite --url | head -n 1\``
+1. ```export IGNITE_EP=`minikube service ignite -n ignite --url | head -n 1` ```
 2. `curl $IGNITE_EP/ignite\?cmd\=top`
 {"name":"default","mode":"PARTITIONED","sqlSchema":null}],"order":2,"attributes":null,"tcpAddresses":["172.17.0.9","127.0.0.1"]}],"sessionToken":null}
 3. `curl $IGNITE_EP/ignite\?cmd\=getorcreate\&cacheName\=test`
@@ -23,7 +23,7 @@ NOTE: assumes you have a kubernetes environment provisioned could be a minikube 
 
 NOTE: pyignite requires python3 so make sure you have python3 virtualenv setup beforehand
 
-1. `export IGNITE_SQL=\`minikube service ignite -n ignite --url | head -n 2 | tail -n 1\``
+1. ```export IGNITE_SQL=`minikube service ignite -n ignite --url | head -n 2 | tail -n 1` ```
 2. `pip install -r requirements.txt`
 3. `python ignite-sql.py` 
 
